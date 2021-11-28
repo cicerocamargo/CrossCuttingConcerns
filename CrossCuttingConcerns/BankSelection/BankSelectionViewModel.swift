@@ -6,42 +6,27 @@ struct BankSelectionViewState {
     var selected: Bank?
 }
 
-protocol BankSelectionViewModelProtocol: ObservableObject {
-    var state: BankSelectionViewState { get }
-    func onAppear()
-    func select(_ bank: Bank)
-    func advance()
-}
-
-final class BankSelectionViewModel: BankSelectionViewModelProtocol {
+final class BankSelectionViewModel: ObservableObject {
     @Published
     private(set) var state = BankSelectionViewState()
 
     private let service: ListOfBanksService
     private let cache: ListOfBanksCache
-    private let firebaseTracking: BankSelectionTracking
-    private let oneSignalTracking: BankSelectionTracking
+    private let tracking: BankSelectionTracking
     
     init(
         service: ListOfBanksService,
         cache: ListOfBanksCache,
-        firebaseTracking: BankSelectionTracking,
-        oneSignalTracking: BankSelectionTracking
+        tracking: BankSelectionTracking
     ) {
         self.service = service
         self.cache = cache
-        self.firebaseTracking = firebaseTracking
-        self.oneSignalTracking = oneSignalTracking
+        self.tracking = tracking
     }
     
     func onAppear() {
-        trackView()
+        tracking.trackView()
         fetchBanks()
-    }
-    
-    private func trackView() {
-        firebaseTracking.trackView()
-        oneSignalTracking.trackView()
     }
     
     private func fetchBanks() {

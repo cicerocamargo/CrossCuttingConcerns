@@ -2,9 +2,9 @@ import Combine
 import SwiftUI
 import UIKit
 
-struct BankSelectionView<ViewModel: BankSelectionViewModelProtocol>: View {
+struct BankSelectionView: View {
     @ObservedObject
-    var viewModel: ViewModel
+    var viewModel: BankSelectionViewModel
     
     var body: some View {
         List(viewModel.state.banks, id: \.code) { bank in
@@ -54,8 +54,7 @@ struct BankSelection_Previews: PreviewProvider {
                         ])
                     ),
                     cache: ListOfBanksNoCache(),
-                    firebaseTracking: DummyBankSelectionTracking(),
-                    oneSignalTracking: DummyBankSelectionTracking()
+                    tracking: DummyBankSelectionTracking()
                 )
             )
         }

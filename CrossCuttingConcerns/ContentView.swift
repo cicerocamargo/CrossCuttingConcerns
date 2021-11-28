@@ -7,8 +7,7 @@ struct ContentView: View {
                 viewModel: BankSelectionViewModel(
                     service: LiveListOfBanksService(),
                     cache: ListOfBanksInMemoryCache(),
-                    firebaseTracking: DebugBankSelectionTracking(tag: "Firebase"),
-                    oneSignalTracking: DebugBankSelectionTracking(tag: "OneSignal")
+                    tracking: DebugBankSelectionTracking(tag: "Firebase")
                 )
             )
         }
