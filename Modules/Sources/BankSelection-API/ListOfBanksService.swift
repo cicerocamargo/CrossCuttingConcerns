@@ -28,15 +28,3 @@ public struct LiveListOfBanksService: ListOfBanksService {
         ).resume()
     }
 }
-
-#if DEBUG
-struct ListOfBanksServiceStub: ListOfBanksService {
-    var result: Result<[Bank], Error>
-    
-    func listOfBanks(completion: @escaping (Result<[Bank], Error>) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            completion(result)
-        }
-    }
-}
-#endif

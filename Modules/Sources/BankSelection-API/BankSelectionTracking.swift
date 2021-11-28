@@ -13,9 +13,3 @@ public struct DebugBankSelectionTracking: BankSelectionTracking {
         #endif
     }
 }
-
-#if DEBUG
-struct DummyBankSelectionTracking: BankSelectionTracking {
-    func trackView() {}
-}
-#endif

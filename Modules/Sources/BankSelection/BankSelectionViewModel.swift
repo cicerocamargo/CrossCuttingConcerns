@@ -1,14 +1,15 @@
+import BankSelection_API
 import Foundation
 
-struct BankSelectionViewState {
-    var banks: [Bank] = []
-    var isLoading = false
-    var selected: Bank?
-}
-
 public final class BankSelectionViewModel: ObservableObject {
+    struct State {
+        var banks: [Bank] = []
+        var isLoading = false
+        var selected: Bank?
+    }
+    
     @Published
-    private(set) var state = BankSelectionViewState()
+    private(set) var state = State()
 
     private let service: ListOfBanksService
     private let cache: ListOfBanksCache

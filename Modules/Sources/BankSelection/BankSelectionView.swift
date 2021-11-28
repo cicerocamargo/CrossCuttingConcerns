@@ -44,24 +44,3 @@ public struct BankSelectionView: View {
         }
     }
 }
-
-#if DEBUG
-struct BankSelection_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            BankSelectionView(
-                viewModel: BankSelectionViewModel(
-                    service: ListOfBanksServiceStub(
-                        result: .success([
-                            Bank(code: 123, name: "Bank A"),
-                            Bank(code: 456, name: "Bank B"),
-                        ])
-                    ),
-                    cache: ListOfBanksNoCache(),
-                    tracking: DummyBankSelectionTracking()
-                )
-            )
-        }
-    }
-}
-#endif

@@ -12,8 +12,12 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(
-            name: "BankSelection",
+            name: "BankSelection-API",
             dependencies: []
+        ),
+        .target(
+            name: "BankSelection",
+            dependencies: ["BankSelection-API"]
         ),
         .testTarget(
             name: "BankSelectionTests",

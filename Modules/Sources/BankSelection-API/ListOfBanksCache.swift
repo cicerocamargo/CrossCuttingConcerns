@@ -7,12 +7,3 @@ public class ListOfBanksInMemoryCache: ListOfBanksCache {
     
     public var banks: [Bank] = []
 }
-
-#if DEBUG
-class ListOfBanksNoCache: ListOfBanksCache {
-    var banks: [Bank] {
-        get { [] }
-        set { }
-    }
-}
-#endif
