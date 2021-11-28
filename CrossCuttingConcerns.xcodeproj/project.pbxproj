@@ -11,13 +11,8 @@
 		046C963427525379006153F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C963327525379006153F9 /* ContentView.swift */; };
 		046C96362752537A006153F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046C96352752537A006153F9 /* Assets.xcassets */; };
 		046C96392752537A006153F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046C96382752537A006153F9 /* Preview Assets.xcassets */; };
-		046C964027525507006153F9 /* BankSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C963F27525507006153F9 /* BankSelectionView.swift */; };
-		046C964227525A44006153F9 /* GenericUIViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C964127525A44006153F9 /* GenericUIViewControllerWrapper.swift */; };
-		046C9645275261D4006153F9 /* ListOfBanksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9644275261D4006153F9 /* ListOfBanksService.swift */; };
-		046C964927526223006153F9 /* BankSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C964827526223006153F9 /* BankSelectionViewModel.swift */; };
-		046C964B27541E0D006153F9 /* ListOfBanksCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C964A27541E0D006153F9 /* ListOfBanksCache.swift */; };
-		046C964D275421BF006153F9 /* BankSelectionTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C964C275421BF006153F9 /* BankSelectionTracking.swift */; };
 		046C964F275424DF006153F9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 046C964E275424DF006153F9 /* README.md */; };
+		046C965327543462006153F9 /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = 046C965227543462006153F9 /* Modules */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +21,8 @@
 		046C963327525379006153F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		046C96352752537A006153F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046C96382752537A006153F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		046C963F27525507006153F9 /* BankSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionView.swift; sourceTree = "<group>"; };
-		046C964127525A44006153F9 /* GenericUIViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericUIViewControllerWrapper.swift; sourceTree = "<group>"; };
-		046C9644275261D4006153F9 /* ListOfBanksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBanksService.swift; sourceTree = "<group>"; };
-		046C964827526223006153F9 /* BankSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionViewModel.swift; sourceTree = "<group>"; };
-		046C964A27541E0D006153F9 /* ListOfBanksCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBanksCache.swift; sourceTree = "<group>"; };
-		046C964C275421BF006153F9 /* BankSelectionTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionTracking.swift; sourceTree = "<group>"; };
 		046C964E275424DF006153F9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		046C9650275433F3006153F9 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = text; path = Modules; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046C965327543462006153F9 /* Modules in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +42,7 @@
 			children = (
 				046C963027525379006153F9 /* CrossCuttingConcerns */,
 				046C962F27525379006153F9 /* Products */,
+				046C965127543462006153F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,13 +57,12 @@
 		046C963027525379006153F9 /* CrossCuttingConcerns */ = {
 			isa = PBXGroup;
 			children = (
+				046C9650275433F3006153F9 /* Modules */,
 				046C964E275424DF006153F9 /* README.md */,
-				046C964327526173006153F9 /* BankSelection */,
 				046C963127525379006153F9 /* CrossCuttingConcernsApp.swift */,
 				046C963327525379006153F9 /* ContentView.swift */,
 				046C96352752537A006153F9 /* Assets.xcassets */,
 				046C96372752537A006153F9 /* Preview Content */,
-				046C964127525A44006153F9 /* GenericUIViewControllerWrapper.swift */,
 			);
 			path = CrossCuttingConcerns;
 			sourceTree = "<group>";
@@ -84,16 +75,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		046C964327526173006153F9 /* BankSelection */ = {
+		046C965127543462006153F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				046C963F27525507006153F9 /* BankSelectionView.swift */,
-				046C9644275261D4006153F9 /* ListOfBanksService.swift */,
-				046C964827526223006153F9 /* BankSelectionViewModel.swift */,
-				046C964A27541E0D006153F9 /* ListOfBanksCache.swift */,
-				046C964C275421BF006153F9 /* BankSelectionTracking.swift */,
 			);
-			path = BankSelection;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +98,9 @@
 			dependencies = (
 			);
 			name = CrossCuttingConcerns;
+			packageProductDependencies = (
+				046C965227543462006153F9 /* Modules */,
+			);
 			productName = CrossCuttingConcerns;
 			productReference = 046C962E27525379006153F9 /* CrossCuttingConcerns.app */;
 			productType = "com.apple.product-type.application";
@@ -167,13 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046C964027525507006153F9 /* BankSelectionView.swift in Sources */,
-				046C964927526223006153F9 /* BankSelectionViewModel.swift in Sources */,
-				046C9645275261D4006153F9 /* ListOfBanksService.swift in Sources */,
-				046C964D275421BF006153F9 /* BankSelectionTracking.swift in Sources */,
 				046C963427525379006153F9 /* ContentView.swift in Sources */,
-				046C964B27541E0D006153F9 /* ListOfBanksCache.swift in Sources */,
-				046C964227525A44006153F9 /* GenericUIViewControllerWrapper.swift in Sources */,
 				046C963227525379006153F9 /* CrossCuttingConcernsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +358,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		046C965227543462006153F9 /* Modules */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Modules;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 046C962627525379006153F9 /* Project object */;
 }

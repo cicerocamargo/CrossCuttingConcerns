@@ -2,11 +2,15 @@ import Combine
 import SwiftUI
 import UIKit
 
-struct BankSelectionView: View {
+public struct BankSelectionView: View {
     @ObservedObject
     var viewModel: BankSelectionViewModel
     
-    var body: some View {
+    public init(viewModel: BankSelectionViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    public var body: some View {
         List(viewModel.state.banks, id: \.code) { bank in
             Button(
                 action: {

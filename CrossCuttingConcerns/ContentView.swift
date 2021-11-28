@@ -1,3 +1,4 @@
+import BankSelection
 import SwiftUI
 
 struct ContentView: View {
@@ -7,7 +8,7 @@ struct ContentView: View {
                 viewModel: BankSelectionViewModel(
                     service: LiveListOfBanksService(),
                     cache: ListOfBanksInMemoryCache(),
-                    tracking: DebugBankSelectionTracking(tag: "Firebase")
+                    tracking: DebugBankSelectionTracking()
                 )
             )
         }

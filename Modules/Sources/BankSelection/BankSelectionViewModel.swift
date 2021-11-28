@@ -6,7 +6,7 @@ struct BankSelectionViewState {
     var selected: Bank?
 }
 
-final class BankSelectionViewModel: ObservableObject {
+public final class BankSelectionViewModel: ObservableObject {
     @Published
     private(set) var state = BankSelectionViewState()
 
@@ -14,7 +14,7 @@ final class BankSelectionViewModel: ObservableObject {
     private let cache: ListOfBanksCache
     private let tracking: BankSelectionTracking
     
-    init(
+    public init(
         service: ListOfBanksService,
         cache: ListOfBanksCache,
         tracking: BankSelectionTracking

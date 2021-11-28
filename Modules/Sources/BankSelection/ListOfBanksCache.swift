@@ -1,9 +1,11 @@
-protocol ListOfBanksCache: AnyObject {
+public protocol ListOfBanksCache: AnyObject {
     var banks: [Bank] { get set }
 }
 
-class ListOfBanksInMemoryCache: ListOfBanksCache {
-    var banks: [Bank] = []
+public class ListOfBanksInMemoryCache: ListOfBanksCache {
+    public init() {}
+    
+    public var banks: [Bank] = []
 }
 
 #if DEBUG
