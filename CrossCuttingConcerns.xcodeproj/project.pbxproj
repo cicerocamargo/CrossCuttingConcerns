@@ -13,6 +13,7 @@
 		046C96392752537A006153F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046C96382752537A006153F9 /* Preview Assets.xcassets */; };
 		046C964F275424DF006153F9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 046C964E275424DF006153F9 /* README.md */; };
 		046C965327543462006153F9 /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = 046C965227543462006153F9 /* Modules */; };
+		046C9655275446E9006153F9 /* SingleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9654275446E9006153F9 /* SingleRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		046C96382752537A006153F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		046C964E275424DF006153F9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		046C9650275433F3006153F9 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = text; path = Modules; sourceTree = SOURCE_ROOT; };
+		046C9654275446E9006153F9 /* SingleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				046C964E275424DF006153F9 /* README.md */,
 				046C963127525379006153F9 /* CrossCuttingConcernsApp.swift */,
 				046C963327525379006153F9 /* ContentView.swift */,
+				046C9654275446E9006153F9 /* SingleRequest.swift */,
 				046C96352752537A006153F9 /* Assets.xcassets */,
 				046C96372752537A006153F9 /* Preview Content */,
 			);
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046C963427525379006153F9 /* ContentView.swift in Sources */,
+				046C9655275446E9006153F9 /* SingleRequest.swift in Sources */,
 				046C963227525379006153F9 /* CrossCuttingConcernsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

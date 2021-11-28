@@ -5,10 +5,32 @@ author: Cícero Camargo
 date: Nov 30th 2021
 ---
 
+
+
+
+
+# Vamos começar pelo código 
+
+Commit: `a94f08404a026cc83107d9b7fd793d923b867417`.
+
+
+
+
+
+
+
+
+
+
+
+
+
 # O que são Interesses Transversais?
 
-Interesses Transversais (ou Cross-cutting Concerns) são, basicamente, trechos de
-código que não implementam Interesses de Negócio. Alguns exemplos:
+Interesses Transversais (ou Cross-cutting Concerns) são, basicamente,
+trechos de código que não implementam Interesses de Negócio. 
+
+Exemplos:
 
 * Tracking
 * Caching
@@ -16,10 +38,23 @@ código que não implementam Interesses de Negócio. Alguns exemplos:
 * Logging
 * Medição de Performance, etc.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Aspect Oriented Programming
 
-Um conjunto de técnicas e ferramentas para implementar Aspectos (outro nome para
-os Interesses Transversais).
+Um conjunto de técnicas e ferramentas para implementar Aspectos (wrappers de
+Interesses Transversais).
 
 A ideia é:
 
@@ -30,4 +65,17 @@ A ideia é:
 * Method Swizzling 😅 (Hello Firebase, Facebook, etc.)
 * Código bem fatorado 😎 (principalmente com o uso do *Decorator Pattern*) 
 
-# Demo Time 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Bora codar de novo?
