@@ -7,7 +7,10 @@ let package = Package(
     name: "Modules",
     platforms: [.iOS(.v15)],
     products: [
-        .library(name: "Modules", targets: ["BankSelection"])
+        .library(
+            name: "Modules",
+            targets: ["BankSelection", "Networking"]
+        )
     ],
     dependencies: [],
     targets: [
@@ -22,6 +25,11 @@ let package = Package(
         .testTarget(
             name: "BankSelectionTests",
             dependencies: ["BankSelection"]
+        ),
+        
+        .target(
+            name: "Networking",
+            dependencies: ["BankSelection-API"]
         )
     ]
 )
