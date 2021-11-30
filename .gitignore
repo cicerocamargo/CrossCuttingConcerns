@@ -1,0 +1,11 @@
+## macOS
+.DS_Store
+src/.DS_Store
+
+## User settings
+xcuserdata/
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
