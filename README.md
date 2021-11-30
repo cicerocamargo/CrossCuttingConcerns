@@ -43,8 +43,7 @@ A ideia é:
 
 # Valeu!
 
-- email: camargo.cicero@gmail.com
-- youtube: Cícero Camargo CODEMUS
-- instagram: cicerocamargo.dev
-- twitter: cicerocamargo
-- linkedin: linkedin.com/in/cicerocamargo
+- youtube: https://www.youtube.com/channel/UC9eWMeqQXV4l4j0xZgLHb-w
+- instagram: https://instagram.com/cicerocamargo.dev
+- twitter: https://twitter.com/cicerocamargo
+- linkedin: https://linkedin.com/in/cicerocamargo
