@@ -12,7 +12,7 @@ date: Nov 30th 2021
 
 # Vamos começar pelo código 
 
-Commit: `805f75891deccfc17da35e3ddd4b6d82a4e6bd0e`.
+Commit: `de086573ae9ac4bf9b69e249f5bf65ad56414e95`.
 
 
 
