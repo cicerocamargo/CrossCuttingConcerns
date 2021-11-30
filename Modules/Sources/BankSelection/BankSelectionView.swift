@@ -31,7 +31,7 @@ public struct BankSelectionView: View {
         .navigationTitle(Text("Select your bank"))
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(
-            trailing: Button("Next", action: viewModel.advance)
+            trailing: Button("Next", action: {})
                 .disabled(viewModel.state.selected == nil)
         )
         .onAppear(perform: viewModel.onAppear)

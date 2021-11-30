@@ -61,8 +61,41 @@ public final class BankSelectionViewModel: ObservableObject {
     func select(_ bank: Bank) {
         state.selected = bank
     }
-    
-    func advance() {
-        // TODO: implement
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ public enum Command: Equatable {
+     case onAppear
+     case select(Bank)
+ }
+ 
+ public let command = PassthroughSubject<Command, Never>()
+ 
+ public var cancellables = Set<AnyCancellable>()
+ 
+ command.sink { [weak self] comm in
+     switch comm {
+     case .onAppear: self?.onAppear()
+     case .select(let bank): self?.select(bank)
+     }
+ }.store(in: &cancellables)
+
+ */

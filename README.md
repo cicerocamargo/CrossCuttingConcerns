@@ -1,9 +1,10 @@
 ---
 title: Implementando Interesses Transversais - um papo sobre
 arquitetura, DI e Design Patterns em Swift/iOS
-author: Cícero Camargo
+author: Cícero Camargo (CODEMUS)
 date: Nov 30th 2021
 ---
+
 
 
 
@@ -78,4 +79,42 @@ A ideia é:
 
 
 
-# Bora codar de novo?
+# Bora melhorar esse código?
+- Threading (Decorator)
+- Caching (Decorator)
+- Tracking (Command + Observer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Valeu!
+
+email: camargo.cicero@gmail.com
+youtube: Cícero Camargo CODEMUS
+instagram: cicerocamargo.dev
+twitter: cicerocamargo
+linkedin: linkedin.com/in/cicerocamargo
+
+
+
+
+
+
+
+
+
+
+
+
