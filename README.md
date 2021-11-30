@@ -5,26 +5,9 @@ author: Cícero Camargo (CODEMUS)
 date: Nov 30th 2021
 ---
 
-
-
-
-
-
 # Vamos começar pelo código 
 
-Commit: `de086573ae9ac4bf9b69e249f5bf65ad56414e95`.
-
-
-
-
-
-
-
-
-
-
-
-
+Commit: `2d1706305c5ad44b6e96ae1154f684bd7d28c9f2`.
 
 # O que são Interesses Transversais?
 
@@ -38,19 +21,6 @@ Exemplos:
 * Threading
 * Logging
 * Medição de Performance, etc.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Aspect Oriented Programming
 
@@ -66,38 +36,10 @@ A ideia é:
 * Method Swizzling 😅 (Hello Firebase, Facebook, etc.)
 * Código bem fatorado 😎 (principalmente com o uso do *Decorator Pattern*) 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Bora melhorar esse código?
 - Threading (Decorator)
 - Caching (Decorator)
 - Tracking (Command + Observer)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Valeu!
 
@@ -106,15 +48,3 @@ youtube: Cícero Camargo CODEMUS
 instagram: cicerocamargo.dev
 twitter: cicerocamargo
 linkedin: linkedin.com/in/cicerocamargo
-
-
-
-
-
-
-
-
-
-
-
-

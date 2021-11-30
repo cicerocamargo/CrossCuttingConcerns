@@ -1,3 +1,5 @@
+import BankSelection_API
+
 public protocol ListOfBanksCache: AnyObject {
     var banks: [Bank] { get set }
 }

@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "Modules",
-            targets: ["BankSelection", "Networking"]
+            targets: ["BankSelection", "Networking", "Caching", "Tracking"]
         )
     ],
     dependencies: [],
@@ -30,6 +30,16 @@ let package = Package(
         .target(
             name: "Networking",
             dependencies: ["BankSelection-API"]
+        ),
+        
+        .target(
+            name: "Caching",
+            dependencies: ["BankSelection-API"]
+        ),
+
+        .target(
+            name: "Tracking",
+            dependencies: []
         )
     ]
 )

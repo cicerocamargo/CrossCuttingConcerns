@@ -1,4 +1,5 @@
 import BankSelection_API
+import Combine
 import Foundation
 
 public final class BankSelectionViewModel: ObservableObject {
@@ -8,39 +9,41 @@ public final class BankSelectionViewModel: ObservableObject {
         var selected: Bank?
     }
     
+    public enum Command: Equatable {
+        case onAppear
+        case select(Bank)
+    }
+    
+    public let command = PassthroughSubject<Command, Never>()
+    
+    public var cancellables = Set<AnyCancellable>()
+    
     @Published
     private(set) var state = State()
 
     private let service: ListOfBanksService
-    private let cache: ListOfBanksCache
-    private let tracking: BankSelectionTracking
     
-    public init(
-        service: ListOfBanksService,
-        cache: ListOfBanksCache,
-        tracking: BankSelectionTracking
-    ) {
+    public init(service: ListOfBanksService) {
         self.service = service
-        self.cache = cache
-        self.tracking = tracking
+        
+        command.sink { [weak self] in self?.handleCommand($0) }
+            .store(in: &cancellables)
     }
     
-    func onAppear() {
-        tracking.trackView()
-        fetchBanks()
+    private func handleCommand(_ command: Command) {
+        switch command {
+        case .onAppear:
+            fetchBanks()
+            
+        case .select(let bank):
+            state.selected = bank
+        }
     }
     
     private func fetchBanks() {
-        if !cache.banks.isEmpty {
-            state.banks = cache.banks
-            return
-        }
-        
         state.isLoading = true
         service.listOfBanks { [weak self] result in
-            DispatchQueue.main.async {
-                self?.handleFetchBanksResult(result)
-            }
+            self?.handleFetchBanksResult(result)
         }
     }
     
@@ -49,17 +52,12 @@ public final class BankSelectionViewModel: ObservableObject {
         do {
             let banks = try result.get()
             state.banks = banks
-            cache.banks = banks
         } catch {
             // TODO: handle error
             #if DEBUG
             print(error)
             #endif
         }
-    }
-    
-    func select(_ bank: Bank) {
-        state.selected = bank
     }
 }
 
@@ -81,21 +79,9 @@ public final class BankSelectionViewModel: ObservableObject {
 
 
 
-/*
- public enum Command: Equatable {
-     case onAppear
-     case select(Bank)
- }
  
- public let command = PassthroughSubject<Command, Never>()
  
- public var cancellables = Set<AnyCancellable>()
  
- command.sink { [weak self] comm in
-     switch comm {
-     case .onAppear: self?.onAppear()
-     case .select(let bank): self?.select(bank)
-     }
- }.store(in: &cancellables)
+ 
+ 
 
- */

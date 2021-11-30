@@ -14,7 +14,7 @@ public struct BankSelectionView: View {
         List(viewModel.state.banks, id: \.code) { bank in
             Button(
                 action: {
-                    viewModel.select(bank)
+                    viewModel.command.send(.select(bank))
                 },
                 label: {
                     HStack {
@@ -34,7 +34,7 @@ public struct BankSelectionView: View {
             trailing: Button("Next", action: {})
                 .disabled(viewModel.state.selected == nil)
         )
-        .onAppear(perform: viewModel.onAppear)
+        .onAppear(perform: { viewModel.command.send(.onAppear) })
     }
     
     @ViewBuilder
